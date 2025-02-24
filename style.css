@@ -1,0 +1,281 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: century-gothic, sans-serif;
+}
+
+:root {
+    --bg-color: #F3EFF5;
+    --text-color: black;
+    --main-color: #BB2569;
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.header{
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 12% 4rem;
+    background: #E3D9E7;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    flex-wrap: wrap;
+}
+
+.logo{
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.navbar a{
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+    flex-wrap: wrap;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+#menu-icon {
+    font-size: 2rem;  /* Adjust size if needed */
+    color: var(--main-color);  /* Change color if needed */
+    cursor: pointer;
+    display: none;  /* Ensure it's visible */
+}
+
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 30px 12% 0;
+}
+
+.home-content{
+    max-width:800px;
+    width: 70%;
+    justify-content: center;
+
+}
+
+.home-content h3{
+    font-size: 42px;
+}
+
+.home-content h1{
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+.img-box{
+    width: 40%;
+    flex-shrink: 0;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+}
+
+.img-box img{
+    border-radius: 50%;
+    width: 450px;
+    max-width: 100%;
+    height:auto;
+}
+
+.aboutme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;
+}
+
+.experience{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 8%;
+    gap: 10em;
+}
+
+.experience h2{
+    color: #c64e84;
+    font-size: 60px;
+}
+
+.experience .contents{
+    padding: 0px 30px;
+    border-left: 2px solid #bababa;
+}
+
+.experience .contents .box{
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    
+}
+
+.experience .contents .box::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 24px);
+    top: 10px;
+    background-color: #BB2569;
+    
+}
+
+.ucsd img{
+    position: relative;
+    width: 600px;
+    max-width: 80%;
+    height:auto;
+    min-width: 300px;
+}
+
+.about-content h2{
+    text-align: left;
+    font-size: 60px;
+}
+
+.about-content p{
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.highlight{
+    color: var(--main-color);
+}
+.highlight_cs{
+    color: var(--main-color);
+    font-weight: bold;
+}
+
+/*Projects Section*/
+
+.projects h2{
+    margin-bottom: 5rem;
+    font-size: 60px;
+    color: var(--text-color);
+}
+
+.projs-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.projs-container2{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.proj-box{
+    background-color: white;
+    color:black;
+    height: 450px;
+    border-radius: 3rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.proj-box:hover{
+    color: #c64e84;
+    transform: scale(1.03);
+    
+}
+
+.proj-box .proj-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-height: 200px;
+    justify-content: center;
+    align-items: baseline;
+    padding: 5em;
+}
+
+.proj-info h4 {
+    font-size: 2.5rem;
+    font-weight: 450;
+    margin-bottom: 1rem;
+}
+
+.proj-gif {
+    display: flex; /* Use flexbox for the gif container */
+    justify-content: center; /* Center align the gif horizontally */
+    width: 100%; /* Take full width of the proj-box */
+    padding: 3rem;
+}
+
+.proj-gif img {
+    width: 100%; /* Make the image take the full width of .proj-gif */
+    height: 200px; /* Maintain aspect ratio */
+    max-width: 250px; /* Set a max-width if needed */
+    object-fit: cover; /* Crop the image to fit the box */
+    justify-content: center;
+}
+
+/* Footer */
+footer{
+    padding:50px;
+    background-color: #E3D9E7;
+}
+
+.footer-content h3 {
+    color:#BB2569;
+    font-size: 20px;
+}
+
+.footer-links p{
+    color: var(--text-color);
+    cursor:pointer;
+}
+
+.footer-icon {
+    cursor:pointer;
+    color: gray;
+    font-size: 13px;
+    
+}
